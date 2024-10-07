@@ -14,7 +14,7 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.web.cors.CorsConfiguration;
 
-import com.hows.config.filter.JwtAuthenticationFilter;
+import com.levelup.config.filter.JwtAuthenticationFilter;
 
 @Configuration
 @EnableWebSecurity
