@@ -1,0 +1,6 @@
+/.metadata/
+
+.DS_Store
+LevelUpFront/.env
+LevelUpServer/src/main/resources/*.json
+LevelUpFront/.firebase/
