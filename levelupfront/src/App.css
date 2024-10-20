@@ -143,56 +143,56 @@ button {
 
 :root {
   /* Gray scale */
-  --hows-black: #000000;
-  --hows-gray-900: #1a1a1a;
-  --hows-gray-800: #333333;
-  --hows-gray-700: #4d4d4d;
-  --hows-gray-600: #666666;
-  --hows-gray-500: #808080;
-  --hows-gray-400: #999999;
-  --hows-gray-300: #b3b3b3;
-  --hows-gray-200: #cccccc;
-  --hows-gray-100: #e6e6e6;
-  --hows-gray: #F9F9F9;
-  --hows-white: #ffffff;
+  --LevelUp-black: #000000;
+  --LevelUp-gray-900: #1a1a1a;
+  --LevelUp-gray-800: #333333;
+  --LevelUp-gray-700: #4d4d4d;
+  --LevelUp-gray-600: #666666;
+  --LevelUp-gray-500: #808080;
+  --LevelUp-gray-400: #999999;
+  --LevelUp-gray-300: #b3b3b3;
+  --LevelUp-gray-200: #cccccc;
+  --LevelUp-gray-100: #e6e6e6;
+  --LevelUp-gray: #F9F9F9;
+  --LevelUp-white: #ffffff;
 
   /* Main Point Color Scale */
-  /* 연한 색 (#E4EABE) */
-  --hows-point-color-lightest: #E4EABE;
-  /* 연한 색 (#E4EABE 미디움 버전) */
-  --hows-point-color-lightest-medium: #B7BC84;
-  /* 연한 색 (#A3B28B의 연한 버전) */
-  --hows-point-color-light: #c0cfb1;
-  /* 연한 색 (#A3B28B의 연한 버전) */
-  --hows-point-color: #a3b28b;
+  /* 연한 색 (#D9C3DD) */
+  --LevelUp-point-color-lightest: #D9C3DD;
+  /* 연한 색 (#B88EBF 미디움 버전) */
+  --LevelUp-point-color-lightest-medium: #C5A3CB;
+  /* 연한 색 (#B88EBF의 연한 버전) */
+  --LevelUp-point-color-light: #B88EBF;
   /* 메인 포인트 컬러 */
-  --hows-point-color-dark: #8b976e;
-  /* 진한 색 (#A3B28B의 진한 버전) */
-  --hows-point-color-darker: #6D7A5C;
-  /* 더 진한 색 */
-  --hows-point-color-darkest: #5D684A;
-  /* 가장 진한 색 *
+  --LevelUp-point-color: #A26BAB;
+  /* 진한 색 (#85508D의 진한 버전) */
+  --LevelUp-point-color-dark: #85508D;
+  /* 더 진한 색 (#633C6A의 더 진한 버전) */
+  --LevelUp-point-color-darker: #633C6A;
+  /* 가장 진한 색 */
+  --LevelUp-point-color-darkest: #311e34;
+
   /* Pastel Red Scale */
-  --hows-red-light: #ff9999;
+  --LevelUp-red-light: #ff9999;
   /* 연한 빨강 */
-  --hows-red: #ff6666;
+  --LevelUp-red: #ff6666;
   /* 메인 빨강 */
-  --hows-red-dark: #ff3333;
+  --LevelUp-red-dark: #ff3333;
   /* 진한 빨강 */
-  --hows-red-darker: #cc0000;
+  --LevelUp-red-darker: #cc0000;
   /* 더 진한 빨강 */
-  --hows-red-darkest: #990000;
+  --LevelUp-red-darkest: #990000;
   /* 가장 진한 빨강 */
 
   /* Pastel Blue Scale */
-  --hows-blue-light: #99ccff;
+  --LevelUp-blue-light: #99ccff;
   /* 연한 파랑 */
-  --hows-blue: #66b3ff;
+  --LevelUp-blue: #66b3ff;
   /* 메인 파랑 */
-  --hows-blue-dark: #3399ff;
+  --LevelUp-blue-dark: #3399ff;
   /* 진한 파랑 */
-  --hows-blue-darker: #0066cc;
+  --LevelUp-blue-darker: #0066cc;
   /* 더 진한 파랑 */
-  --hows-blue-darkest: #004c99;
+  --LevelUp-blue-darkest: #004c99;
   /* 가장 진한 파랑 */
 }
