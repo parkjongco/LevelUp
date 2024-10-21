@@ -157,19 +157,19 @@ button {
   --LevelUp-white: #ffffff;
 
   /* Main Point Color Scale */
-  /* 연한 색 (#D9C3DD) */
+  /* 가장 연한 색 (#D9C3DD) */
   --LevelUp-point-color-lightest: #D9C3DD;
-  /* 연한 색 (#B88EBF 미디움 버전) */
+  /* 연한 색 (#B88EBF의 중간 버전) */
   --LevelUp-point-color-lightest-medium: #C5A3CB;
-  /* 연한 색 (#B88EBF의 연한 버전) */
+  /* 연한 색 (#B88EBF) */
   --LevelUp-point-color-light: #B88EBF;
   /* 메인 포인트 컬러 */
   --LevelUp-point-color: #A26BAB;
-  /* 진한 색 (#85508D의 진한 버전) */
+  /* 진한 색 (#A26BAB의 진한 버전) */
   --LevelUp-point-color-dark: #85508D;
-  /* 더 진한 색 (#633C6A의 더 진한 버전) */
+  /* 더 진한 색 (#85508D의 더 진한 버전) */
   --LevelUp-point-color-darker: #633C6A;
-  /* 가장 진한 색 */
+  /* 가장 진한 색 (#633C6A의 더 진한 버전) */
   --LevelUp-point-color-darkest: #311e34;
 
   /* Pastel Red Scale */
