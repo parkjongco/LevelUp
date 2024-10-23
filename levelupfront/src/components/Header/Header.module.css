@@ -11,6 +11,7 @@
     z-index: 1000;
     transition: all 0.1s ease;
     /* 애니메이션을 위한 트랜지션 */
+    background-color: red;
 }
 
 .headerCont.fixed {

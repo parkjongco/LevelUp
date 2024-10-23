@@ -8,9 +8,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { useState } from 'react'
 
 function App() {
-    const [session, setSession] = useState(false)
+    const [session, setSession] = useState(true)
     // 로딩
-
     // if login
 
     return (
