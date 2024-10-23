@@ -49,82 +49,95 @@ export const Header = () => {
                     }`}
                 >
                     <div className={styles.mainNavi}>
-                        <div className={styles.menuBox}>
-                            <div className={styles.mainLogo}>
-                                <a>
-                                    <img src={logo} alt="Logo" />
-                                </a>
+                        <div className={styles.topWrap}>
+                            <div className={styles.menuBox}>
+                                <div className={styles.mainLogo}>
+                                    <a>
+                                        {/* <img src={logo} alt="Logo" /> */}
+                                        levelUp
+                                    </a>
+                                </div>
+                                <div className={styles.naviMenuList}>
+                                    <div className={styles.searchBox}>
+                                        <input
+                                            type="search"
+                                            placeholder="어떤 상품을 찾으시나요?"
+                                        />
+                                    </div>
+                                </div>
                             </div>
-                            <div className={styles.naviMenuList}>
-                                <div
-                                    className={`${styles.naviMenu} ${
-                                        activeMenu === 'Main'
-                                            ? styles.active
-                                            : ''
-                                    }`}
-                                    onClick={() => handleMenuClick('Main')}
-                                >
-                                    <a>Main</a>
+                            <div className={styles.naviInfo}>
+                                <div className={styles.infoIcon}>
+                                    <a>
+                                        <i className="bx bx-bookmark"></i>
+                                    </a>
+                                </div>
+                                <div className={styles.infoIcon}>
+                                    <a
+                                        onClick={() => {
+                                            navigate('/cart')
+                                        }}
+                                    >
+                                        <i className="bx bx-cart"></i>
+                                    </a>
+                                </div>
+                                <div className={styles.infoIcon}>
+                                    <a>
+                                        <i className="bx bx-bell"></i>
+                                    </a>
                                 </div>
                                 <div
-                                    className={`${styles.naviMenu} ${
-                                        activeMenu === 'HowStory'
-                                            ? styles.active
-                                            : ''
-                                    }`}
-                                    onClick={() => handleMenuClick('HowStory')}
+                                    className={
+                                        session
+                                            ? `${styles.infoUser}`
+                                            : `${styles.infoIcon}`
+                                    }
                                 >
-                                    <a>HowStory</a>
-                                </div>
-                                <div
-                                    className={`${styles.naviMenu} ${
-                                        activeMenu === 'HowShop'
-                                            ? styles.active
-                                            : ''
-                                    }`}
-                                    onClick={() => handleMenuClick('HowShop')}
-                                >
-                                    <a>HowShop</a>
+                                    {session ? (
+                                        <a>
+                                            <img src="" alt="User" />
+                                        </a>
+                                    ) : (
+                                        <a>
+                                            <i class="bx bxs-user-circle"></i>
+                                        </a>
+                                    )}
                                 </div>
                             </div>
                         </div>
-                        <div className={styles.naviInfo}>
-                            <div className={styles.infoIcon}>
-                                <a>
-                                    <i className="bx bx-bookmark"></i>
-                                </a>
-                            </div>
-                            <div className={styles.infoIcon}>
-                                <a
-                                    onClick={() => {
-                                        navigate('/cart')
-                                    }}
-                                >
-                                    <i className="bx bx-cart"></i>
-                                </a>
-                            </div>
-                            <div className={styles.infoIcon}>
-                                <a>
-                                    <i className="bx bx-bell"></i>
-                                </a>
+                        <div className={styles.bottomWrap}>
+                            {/* <div
+                                className={`${styles.naviMenu} ${
+                                    activeMenu === 'Main' ? styles.active : ''
+                                }`}
+                                onClick={() => handleMenuClick('Main')}
+                            >
+                                <a>Main</a>
                             </div>
                             <div
-                                className={
-                                    session
-                                        ? `${styles.infoUser}`
-                                        : `${styles.infoIcon}`
-                                }
+                                className={`${styles.naviMenu} ${
+                                    activeMenu === 'HowStory'
+                                        ? styles.active
+                                        : ''
+                                }`}
+                                onClick={() => handleMenuClick('HowStory')}
                             >
-                                {session ? (
-                                    <a>
-                                        <img src="" alt="User" />
-                                    </a>
-                                ) : (
-                                    <a>
-                                        <i class="bx bxs-user-circle"></i>
-                                    </a>
-                                )}
+                                <a>HowStory</a>
                             </div>
+                            <div
+                                className={`${styles.naviMenu} ${
+                                    activeMenu === 'HowShop'
+                                        ? styles.active
+                                        : ''
+                                }`}
+                                onClick={() => handleMenuClick('HowShop')}
+                            >
+                                <a>HowShop</a>
+                            </div> */}
+                            <div>카테고리</div>
+                            <div>중고거래</div>
+                            <div>알바</div>
+                            <div>공지사항</div>
                         </div>
                     </div>
                 </div>
