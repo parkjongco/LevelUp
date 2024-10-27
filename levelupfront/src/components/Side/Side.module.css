@@ -21,7 +21,7 @@
  .logotit {
      font-size: 28px;
      font-weight: 700;
-     color: var(--hows-point-color);
+     color: #A26BAB
  }
 
  .adminListCont {
@@ -81,4 +81,31 @@
      display: block;
      padding-left: 20px;
 
+ }
+
+ .logout {
+     /* flex-direction: column; */
+     color: #A26BAB;
+     height: 40px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     /* line-height: 100px; */
+     border-radius: 10px;
+     padding-top: 10px;
+     border: 3px solid #A26BAB;
+ }
+
+ .logout:hover {
+     color: #ffffff;
+     height: 40px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     /* line-height: 100px; */
+     border-radius: 10px;
+     padding-top: 10px;
+     background-color: #A26BAB;
+     border: 3px solid #A26BAB;
+     transition: 0.3s;
  }

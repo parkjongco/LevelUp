@@ -5,6 +5,8 @@ import { useNavigate } from 'react-router-dom' // useNavigate 임포트
 
 export const Side = () => {
     const navigate = useNavigate() // useNavigate 사용
+    // 알람 개수 상태를 관리
+    const [notificationCount, setNotificationCount] = useState(5) // 예시로 5개로 설정
 
     // 각 3뎁스 메뉴의 열림/닫힘 상태를 관리
     const [openMenus, setOpenMenus] = useState({})
@@ -29,17 +31,16 @@ export const Side = () => {
             title: '회원 관리',
             subMenu: [
                 {
-                    title: '등급 관리',
+                    title: '회원 목록',
                     icon: 'bx bx-group', // 아이콘 추가
-                    subMenu: [
-                        { title: '등급 목록', path: '/' },
-                        { title: '등급 추가', path: '/' },
-                    ],
                 },
                 {
-                    title: '블랙리스트 관리',
+                    title: '블랙리스트 목록',
                     icon: 'bx bx-block', // 아이콘 추가
-                    subMenu: [{ title: '블랙리스트 조회', path: '/' }],
+                },
+                {
+                    title: '신고 회원 목록',
+                    icon: 'bx bx-user-x', // 아이콘 추가
                 },
             ],
         },
@@ -47,66 +48,48 @@ export const Side = () => {
             title: '게시판 관리',
             subMenu: [
                 {
-                    title: '게시글 관리',
-                    icon: 'bx bx-file', // 아이콘 추가
-                    subMenu: [
-                        { title: '게시글 목록', path: '/' },
-                        { title: '게시글 작성', path: '/' },
-                    ],
+                    title: '신고 게시글 목록',
+                    icon: 'bx bxs-message-square-error', // 아이콘 추가
                 },
                 {
-                    title: '댓글 관리',
-                    icon: 'bx bx-message-rounded-dots', // 아이콘 추가
-                    subMenu: [
-                        { title: '댓글 목록', path: '/' },
-                        { title: '댓글 작성', path: '/' },
-                    ],
-                },
-                {
-                    title: '공지사항 관리',
-                    icon: 'bx bx-error-circle', // 아이콘 추가
-                    subMenu: [
-                        { title: '공지사항 목록', path: '/' },
-                        { title: '공지사항 작성', path: '/' },
-                    ],
-                },
-                {
-                    title: 'FAQ 관리',
-                    icon: 'bx bx-help-circle', // 아이콘 추가
-                    subMenu: [
-                        { title: 'FAQ 목록', path: '/' },
-                        { title: 'FAQ 작성', path: '/' },
-                    ],
+                    title: '신고 알바 목록',
+                    icon: 'bx bx-angry', // 아이콘 추가
                 },
             ],
         },
         {
-            title: '상품 관리',
+            title: '고객센터 관리',
             subMenu: [
                 {
-                    title: '목록 관리',
+                    title: '공지사항 관리',
                     icon: 'bx bx-list-ul', // 아이콘 추가
                     path: '/', // 경로 추가
                 },
                 {
-                    title: '주문 관리',
-                    icon: 'bx bx-cart', // 아이콘 추가
+                    title: 'Q&A 목록',
+                    icon: 'bx bx-message-alt-edit', // 아이콘 추가
                     path: '/', // 경로 추가
                 },
                 {
-                    title: '배송 관리',
-                    icon: 'bx bxs-truck', // 아이콘 추가
+                    title: 'FAQ 목록',
+                    icon: 'bx bx-support', // 아이콘 추가
                     path: '/', // 경로 추가
-                },
-                {
-                    title: '반품 관리',
-                    icon: 'bx bx-undo', // 아이콘 추가
-                    subMenu: [
-                        { title: '반품 목록 조회', path: '/' },
-                        { title: '반품 처리', path: '/' },
-                    ],
                 },
             ],
+        },
+        {
+            title: '채팅관리',
+            subMenu: [
+                {
+                    title: '',
+                    icon: 'bx bx-bell', // 아이콘 추가
+                },
+            ],
+        },
+        {
+            title: '로그아웃',
+            icon: 'bx bx-log-out', // 로그아웃 아이콘 추가
+            subMenu: [],
         },
     ]
 
@@ -115,8 +98,8 @@ export const Side = () => {
             <div className={styles.sideWrap}>
                 {/* 로고 부분 */}
                 <div className={styles.logoBox}>
-                    <img src={logo} alt="Logo" />
-                    <p className={styles.logotit}>How's</p>
+                    {/* <img src={logo} alt="Logo" /> */}
+                    <p className={styles.logotit}>LevelUp</p>
                 </div>
 
                 {/* 관리 리스트 */}
@@ -124,7 +107,13 @@ export const Side = () => {
                     {menuData.map((menu, menuIndex) => (
                         <div key={menuIndex} className={styles.adminList}>
                             <ul>
-                                <li className={styles.listTit}>
+                                <li
+                                    className={`${styles.listTit} ${
+                                        menu.title === '로그아웃'
+                                            ? styles.logout
+                                            : ''
+                                    }`}
+                                >
                                     {/* 메인 메뉴 타이틀 */}
                                     {menu.title}
 
@@ -164,6 +153,20 @@ export const Side = () => {
                                                                     }
                                                                 ></span>
                                                             )}{' '}
+                                                        {/* 알람 메뉴일 때 알람 개수 표시 */}
+                                                        {subMenu.title === '' &&
+                                                            notificationCount >
+                                                                0 && (
+                                                                <span
+                                                                    className={
+                                                                        styles.notificationBadge
+                                                                    }
+                                                                >
+                                                                    {
+                                                                        notificationCount
+                                                                    }
+                                                                </span>
+                                                            )}
                                                         {/* 아이콘 공간 */}
                                                         {typeof subMenu ===
                                                         'string'
