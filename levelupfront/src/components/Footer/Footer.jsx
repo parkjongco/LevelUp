@@ -40,10 +40,10 @@ export const Footer = () => {
                 <div className={styles.border}></div>
                 <div className={styles.company}>
                     <div className={styles.companyInfo}>
-                        <div className={styles.companyTxt}>(주) 도비즈</div>
+                        <div className={styles.companyTxt}>(주) LevelUp</div>
                         <div className={styles.companyTxt}>
                             <span>|</span>
-                            대표이사 노시온
+                            대표이사 민바오
                         </div>
                         <div className={styles.companyTxt}>
                             <span>|</span>
