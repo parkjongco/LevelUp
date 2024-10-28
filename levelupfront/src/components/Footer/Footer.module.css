@@ -3,12 +3,12 @@
     display: flex;
     gap: 20px;
     margin: 0px auto;
-    color: var(--hows-gray-900);
+    color: var(--LevelUp-gray-900);
 }
 
 .border {
     width: 1px;
-    background-color: var(--hows-gray-100);
+    background-color: var(--LevelUp-gray-100);
 }
 
 .customer {
@@ -62,7 +62,7 @@
 
 .customerDay li {
     font-size: 14px;
-    color: var(--hows-gray-400);
+    color: var(--LevelUp-gray-400);
 }
 
 .customerBtn {
@@ -73,8 +73,8 @@
 .customerBtn button {
     padding: 10px 20px;
     border-radius: 8px;
-    border: 1px solid var(--hows-gray-500);
-    background-color: var(--hows-gray);
+    border: 1px solid var(--LevelUp-gray-500);
+    background-color: var(--LevelUp-gray);
     font-weight: 500;
 }
 
@@ -94,7 +94,7 @@
 
 .companyTxt {
     font-size: 14px;
-    color: var(--hows-gray-400);
+    color: var(--LevelUp-gray-400);
 }
 
 .companyTxt span {

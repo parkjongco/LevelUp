@@ -31,7 +31,7 @@
  }
 
  .adminList:not(:last-child) {
-     border-bottom: 1px solid var(--hows-gray-300);
+     border-bottom: 1px solid var(--LevelUp-gray-300);
      padding-bottom: 20px;
  }
 
