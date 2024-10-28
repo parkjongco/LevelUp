@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import styles from './Header.module.css'
 import logo from '../../assets/images/logo_how.png'
 import { useNavigate } from 'react-router-dom'
+import { CategoryScale } from 'chart.js'
 
 export const Header = () => {
     const navigate = useNavigate()
@@ -9,6 +10,75 @@ export const Header = () => {
     const [activeSubMenu, setActiveSubMenu] = useState('홈')
     const [isFixed, setIsFixed] = useState(false)
     const [session, setSession] = useState(false)
+    const [showModal, setShowModal] = useState(false)
+    const [selectedCategory, setSelectedCategory] = useState('의류')
+    const categories = ['의류', '가전제품', '뷰티', '가구', '전자기기']
+
+    const detailCategories = {
+        의류: [
+            {
+                title: '여성의류',
+                items: ['티셔츠', '니트', '원피스'],
+            },
+            {
+                title: '남성의류',
+                items: ['니트', '뷰티', '정장'],
+            },
+        ],
+        가전제품: [
+            {
+                title: '냉장고',
+                items: [],
+            },
+            {
+                title: 'TV',
+                items: [],
+            },
+            {
+                title: '세탁기',
+                items: [],
+            },
+            {
+                title: '주방가구',
+                items: [],
+            },
+        ],
+        뷰티: [
+            {
+                title: '스킨케어',
+                items: [],
+            },
+            {
+                title: '메이크업',
+                items: ['아이 메이크업', '베이스 메이크업', '립'],
+            },
+        ],
+        가구: [
+            {
+                title: '침실가구',
+                items: ['소파', '거실장'],
+            },
+            {
+                title: '거실가구',
+                items: ['식탁', '수납장'],
+            },
+        ],
+        전자기기: [
+            {
+                title: '노트북',
+                items: ['삼성', '애플', 'LG'],
+            },
+            {
+                title: '데스크탑',
+                items: ['일체형', '브랜드', '조립'],
+            },
+            {
+                title: '모니터',
+                items: [],
+            },
+        ],
+        // 나머지 카테고리에 대한 세부 카테고리도 여기에 추가
+    }
 
     const handleMenuClick = menuName => {
         setActiveMenu(menuName)
@@ -49,82 +119,188 @@ export const Header = () => {
                     }`}
                 >
                     <div className={styles.mainNavi}>
-                        <div className={styles.menuBox}>
-                            <div className={styles.mainLogo}>
-                                <a>
-                                    <img src={logo} alt="Logo" />
-                                </a>
+                        <div className={styles.topWrap}>
+                            <div className={styles.menuBox}>
+                                <div className={styles.mainLogo}>
+                                    <a>
+                                        {/* <img src={logo} alt="Logo" /> */}
+                                        LevelUp
+                                    </a>
+                                </div>
+                                <div className={styles.naviMenuList}>
+                                    <div className={styles.searchBox}>
+                                        <input
+                                            type="search"
+                                            placeholder="어떤 상품을 찾으시나요?"
+                                        />
+                                    </div>
+                                </div>
                             </div>
-                            <div className={styles.naviMenuList}>
-                                <div
-                                    className={`${styles.naviMenu} ${
-                                        activeMenu === 'Main'
-                                            ? styles.active
-                                            : ''
-                                    }`}
-                                    onClick={() => handleMenuClick('Main')}
-                                >
-                                    <a>Main</a>
+                            <div className={styles.naviInfo}>
+                                <div className={styles.infoIcon}>
+                                    <a>
+                                        <i class="bx bx-message-rounded-dots"></i>
+                                    </a>
+                                </div>
+                                <div className={styles.infoIcon}>
+                                    <a
+                                        onClick={() => {
+                                            navigate('/cart')
+                                        }}
+                                    >
+                                        <i className="bx bx-cart"></i>
+                                    </a>
+                                </div>
+                                <div className={styles.infoIcon}>
+                                    <a>
+                                        <i className="bx bx-bell"></i>
+                                    </a>
                                 </div>
                                 <div
-                                    className={`${styles.naviMenu} ${
-                                        activeMenu === 'HowStory'
-                                            ? styles.active
-                                            : ''
-                                    }`}
-                                    onClick={() => handleMenuClick('HowStory')}
+                                    className={
+                                        session
+                                            ? `${styles.infoUser}`
+                                            : `${styles.infoIcon}`
+                                    }
                                 >
-                                    <a>HowStory</a>
-                                </div>
-                                <div
-                                    className={`${styles.naviMenu} ${
-                                        activeMenu === 'HowShop'
-                                            ? styles.active
-                                            : ''
-                                    }`}
-                                    onClick={() => handleMenuClick('HowShop')}
-                                >
-                                    <a>HowShop</a>
+                                    {session ? (
+                                        <a>
+                                            <img src="" alt="User" />
+                                        </a>
+                                    ) : (
+                                        <a>
+                                            <i class="bx bxs-user-circle"></i>
+                                        </a>
+                                    )}
                                 </div>
                             </div>
                         </div>
-                        <div className={styles.naviInfo}>
-                            <div className={styles.infoIcon}>
-                                <a>
-                                    <i className="bx bx-bookmark"></i>
-                                </a>
-                            </div>
-                            <div className={styles.infoIcon}>
-                                <a
-                                    onClick={() => {
-                                        navigate('/cart')
-                                    }}
-                                >
-                                    <i className="bx bx-cart"></i>
-                                </a>
-                            </div>
-                            <div className={styles.infoIcon}>
-                                <a>
-                                    <i className="bx bx-bell"></i>
-                                </a>
+                        <div className={styles.ranking}>
+                            <button>{'<'}</button>
+                            <button>{'>'}</button>
+                            <ul className={styles.rank}>
+                                <li>
+                                    <span>1.</span>
+                                    <span>낙곱새</span>
+                                </li>
+                                <li>
+                                    <span>2.</span>
+                                    <span>닭발</span>
+                                </li>
+                                <li>
+                                    <span>3.</span>
+                                    <span>마라탕</span>
+                                </li>
+                                <li>
+                                    <span>4.</span>
+                                    <span>햄버거</span>
+                                </li>
+                                <li>
+                                    <span>5.</span>
+                                    <span>서브웨이</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div className={styles.bottomWrap}>
+                            {/* <div
+                                className={`${styles.naviMenu} ${
+                                    activeMenu === 'Main' ? styles.active : ''
+                                }`}
+                                onClick={() => handleMenuClick('Main')}
+                            >
+                                <a>Main</a>
                             </div>
                             <div
-                                className={
-                                    session
-                                        ? `${styles.infoUser}`
-                                        : `${styles.infoIcon}`
-                                }
+                                className={`${styles.naviMenu} ${
+                                    activeMenu === 'HowStory'
+                                        ? styles.active
+                                        : ''
+                                }`}
+                                onClick={() => handleMenuClick('HowStory')}
                             >
-                                {session ? (
-                                    <a>
-                                        <img src="" alt="User" />
-                                    </a>
-                                ) : (
-                                    <a>
-                                        <i class="bx bxs-user-circle"></i>
-                                    </a>
+                                <a>HowStory</a>
+                            </div>
+                            <div
+                                className={`${styles.naviMenu} ${
+                                    activeMenu === 'HowShop'
+                                        ? styles.active
+                                        : ''
+                                }`}
+                                onClick={() => handleMenuClick('HowShop')}
+                            >
+                                <a>HowShop</a>
+                            </div> */}
+
+                            <div
+                                className={styles.categoryBox}
+                                onMouseEnter={() => setShowModal(true)}
+                                onMouseLeave={() => setShowModal(false)}
+                            >
+                                <i class="bx bx-menu"></i>카테고리
+                                {showModal && (
+                                    <div className={styles.modal}>
+                                        <div className={styles.modalCategory}>
+                                            <ul>
+                                                {categories.map(
+                                                    (category, index) => (
+                                                        <li
+                                                            key={index}
+                                                            onClick={() =>
+                                                                setSelectedCategory(
+                                                                    category
+                                                                )
+                                                            }
+                                                            className={
+                                                                selectedCategory ===
+                                                                category
+                                                                    ? styles.active
+                                                                    : ''
+                                                            }
+                                                        >
+                                                            {category}
+                                                        </li>
+                                                    )
+                                                )}
+                                            </ul>
+                                        </div>
+                                        <div className={styles.detailCategory}>
+                                            {selectedCategory &&
+                                                detailCategories[
+                                                    selectedCategory
+                                                ]?.map((detail, index) => (
+                                                    <ul key={index}>
+                                                        <li
+                                                            className={
+                                                                styles.title
+                                                            }
+                                                        >
+                                                            <span>
+                                                                {detail.title}
+                                                            </span>
+                                                        </li>
+                                                        {detail.items.length >
+                                                            0 &&
+                                                            detail.items.map(
+                                                                (item, idx) => (
+                                                                    <li
+                                                                        key={
+                                                                            idx
+                                                                        }
+                                                                    >
+                                                                        {item}
+                                                                    </li>
+                                                                )
+                                                            )}
+                                                    </ul>
+                                                ))}
+                                        </div>
+                                    </div>
                                 )}
                             </div>
+                            <div className={styles.menu}>중고거래</div>
+                            <div className={styles.menu}>알바</div>
+                            <div className={styles.menu}>고객센터</div>
+                            <div className={styles.menu}>공지사항</div>
                         </div>
                     </div>
                 </div>

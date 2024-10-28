@@ -10,7 +10,6 @@ import { useState } from 'react'
 function App() {
     const [session, setSession] = useState(false)
     // 로딩
-
     // if login
 
     return (
