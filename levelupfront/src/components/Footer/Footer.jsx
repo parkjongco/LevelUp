@@ -20,7 +20,7 @@ export const Footer = () => {
                                 </a>
                             </div>
                             <div className={styles.customerBtn}>
-                                <button type="button">카톡 상담</button>
+                                <button type="button">채팅 상담</button>
                                 <button type="button">이메일 문의</button>
                             </div>
                         </div>
@@ -43,7 +43,7 @@ export const Footer = () => {
                         <div className={styles.companyTxt}>(주) LevelUp</div>
                         <div className={styles.companyTxt}>
                             <span>|</span>
-                            대표이사 민바오
+                            대표이사: 민바오
                         </div>
                         <div className={styles.companyTxt}>
                             <span>|</span>
@@ -51,7 +51,7 @@ export const Footer = () => {
                         </div>
                         <div className={styles.companyTxt}>
                             <span>|</span>
-                            wjsdmsal9865@google.com
+                            wan7078@naver.com
                         </div>
                         <div className={styles.companyTxt}>
                             <span>|</span>
@@ -59,7 +59,7 @@ export const Footer = () => {
                         </div>
                         <div className={styles.companyTxt}>
                             <span>|</span>
-                            대표 번호 01051224519
+                            대표 번호 010-3824-6685
                         </div>
                     </div>
                     <div className={styles.companySns}>
