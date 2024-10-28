@@ -1,0 +1,60 @@
+.l {
+    padding: 20px 40px;
+    font-size: 24px;
+    background-color: var(--LevelUp-white);
+    border-radius: 8px;
+    border: 2px solid var(--LevelUp-point-color);
+    color: var(--LevelUp-point-color-darker);
+    font-weight: 700;
+}
+
+.m {
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: var(--LevelUp-white);
+    border-radius: 8px;
+    border: 2px solid var(--LevelUp-point-color);
+    color: var(--LevelUp-point-color-darker);
+    font-weight: 600;
+}
+
+.s {
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: var(--LevelUp-white);
+    border-radius: 8px;
+    border: 2px solid var(--LevelUp-point-color);
+    color: var(--LevelUp-point-color-darker);
+    font-weight: 500;
+}
+
+.w {
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: var(--LevelUp-white);
+    border-radius: 8px;
+    border: 2px solid var(--LevelUp-point-color);
+    color: var(--LevelUp-point-color-darker);
+    font-weight: 500;
+    width: 100%;
+}
+
+.checked {
+    background-color: var(--LevelUp-point-color-darker);
+    border: 2px solid var(--LevelUp-point-color-darker);
+    color: var(--LevelUp-white);
+}
+
+.s:hover,
+.m:hover,
+.l:hover {
+    background-color: var(--LevelUp-point-color-darker);
+    border: 2px solid var(--LevelUp-point-color-darker);
+    color: var(--LevelUp-white);
+}
+
+.w:active {
+    background-color: var(--LevelUp-point-color-darker);
+    border: 2px solid var(--LevelUp-point-color-darker);
+    color: var(--LevelUp-white);
+}
