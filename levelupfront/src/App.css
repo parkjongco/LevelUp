@@ -81,9 +81,9 @@
 }
 
 .footer {
-  border-top: 1px solid var(--hows-gray-600);
-  padding: 40px;
-  background-color: var(--hows-gray);
+  border-top: 1px solid var(--LevelUp-gray-600);
+  padding: 30px;
+  background-color: var(--LevelUp-gray);
 }
 
 .side {

@@ -51,8 +51,8 @@
 .bottomWrap {
     flex: 1;
     display: flex;
-    gap: 78px;
-    margin-top: 14px;
+    gap: 50px;
+    margin-top: 10px;
     align-items: center;
     font-size: 1.25rem;
 }
@@ -113,7 +113,7 @@
 
 .rank span {
     gap: 10px;
-    font-size: 12px;
+    font-size: 14px;
     color: gray;
 }
 
