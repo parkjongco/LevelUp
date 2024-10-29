@@ -59,7 +59,7 @@
  .listFlDept {
      display: flex;
      flex-direction: column;
-     gap: 20px;
+     gap: 10px;
  }
 
  .listSecDept {
@@ -109,3 +109,13 @@
      border: 3px solid #A26BAB;
      transition: 0.3s;
  }
+
+ .btn {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.btn button {
+    width: 100%;
+}
