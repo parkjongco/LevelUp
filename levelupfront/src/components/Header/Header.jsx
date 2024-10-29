@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import styles from './Header.module.css'
 import logo from '../../assets/images/logo_how.png'
 import { useNavigate } from 'react-router-dom'
-import { CategoryScale } from 'chart.js'
 
 export const Header = () => {
     const navigate = useNavigate()
@@ -202,35 +201,6 @@ export const Header = () => {
                             </ul>
                         </div>
                         <div className={styles.bottomWrap}>
-                            {/* <div
-                                className={`${styles.naviMenu} ${
-                                    activeMenu === 'Main' ? styles.active : ''
-                                }`}
-                                onClick={() => handleMenuClick('Main')}
-                            >
-                                <a>Main</a>
-                            </div>
-                            <div
-                                className={`${styles.naviMenu} ${
-                                    activeMenu === 'HowStory'
-                                        ? styles.active
-                                        : ''
-                                }`}
-                                onClick={() => handleMenuClick('HowStory')}
-                            >
-                                <a>HowStory</a>
-                            </div>
-                            <div
-                                className={`${styles.naviMenu} ${
-                                    activeMenu === 'HowShop'
-                                        ? styles.active
-                                        : ''
-                                }`}
-                                onClick={() => handleMenuClick('HowShop')}
-                            >
-                                <a>HowShop</a>
-                            </div> */}
-
                             <div
                                 className={styles.categoryBox}
                                 onMouseEnter={() => setShowModal(true)}

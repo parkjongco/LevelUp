@@ -42,8 +42,18 @@ export const Side = () => {
             ],
         },
         {
-            title: '채팅관리',
-            subMenu: [{ title: '채팅', icon: 'bx bx-bell', path: '/' }],
+            title: '결제관리',
+            subMenu: [
+                { title: '알림', icon: 'bx bx-bell', path: '/' },
+                { title: '채팅', icon: 'bx bx-support', path: '/' },
+            ],
+        },
+        {
+            title: '알림관리',
+            subMenu: [
+                { title: '알림', icon: 'bx bx-bell', path: '/' },
+                { title: '채팅', icon: 'bx bx-support', path: '/' },
+            ],
         },
         {
             title: '로그아웃',
@@ -57,7 +67,7 @@ export const Side = () => {
             <div className={styles.sideWrap}>
                 {/* 로고 부분 */}
                 <div className={styles.logoBox}>
-                    <p className={styles.logotit}>LevelUp</p>
+                    <p className={styles.logotit}>Level Up</p>
                 </div>
 
                 {/* 관리 리스트 */}
