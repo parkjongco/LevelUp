@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styles from './Side.module.css'
-import { useNavigate } from 'react-router-dom' // useNavigate 임포트
+import { useNavigate, Link } from 'react-router-dom' // useNavigate 임포트
+import { Button } from '../Button/Button'
 
 export const Side = () => {
     const navigate = useNavigate() // useNavigate 사용
@@ -14,9 +15,21 @@ export const Side = () => {
         {
             title: '회원 관리',
             subMenu: [
-                { title: '회원 목록', icon: 'bx bx-group' },
-                { title: '블랙리스트 목록', icon: 'bx bx-block' },
-                { title: '신고 회원 목록', icon: 'bx bx-user-x' },
+                {
+                    title: '회원 목록',
+                    icon: 'bx bx-group',
+                    path: '/admin/member',
+                },
+                {
+                    title: '블랙리스트 목록',
+                    icon: 'bx bx-block',
+                    path: '/admin/blacklist',
+                },
+                {
+                    title: '신고 회원 목록',
+                    icon: 'bx bx-user-x',
+                    path: '/admin/reportedmember',
+                },
             ],
         },
         {
@@ -25,8 +38,9 @@ export const Side = () => {
                 {
                     title: '신고 게시글 목록',
                     icon: 'bx bxs-message-square-error',
+                    path: '/',
                 },
-                { title: '신고 알바 목록', icon: 'bx bx-angry' },
+                { title: '신고 알바 목록', icon: 'bx bx-angry', path: '/' },
             ],
         },
         {
@@ -44,21 +58,24 @@ export const Side = () => {
         {
             title: '결제관리',
             subMenu: [
-                { title: '알림', icon: 'bx bx-bell', path: '/' },
-                { title: '채팅', icon: 'bx bx-support', path: '/' },
+                { title: '거래내역 조회', icon: 'bx bx-receipt', path: '/' },
+                {
+                    title: '임시 카테고리',
+                    icon: 'bx bx-question-mark',
+                    path: '/',
+                },
             ],
         },
         {
             title: '알림관리',
             subMenu: [
                 { title: '알림', icon: 'bx bx-bell', path: '/' },
-                { title: '채팅', icon: 'bx bx-support', path: '/' },
+                {
+                    title: '채팅',
+                    icon: 'bx bx-message-rounded-dots',
+                    path: '/',
+                },
             ],
-        },
-        {
-            title: '로그아웃',
-            icon: 'bx bx-log-out',
-            subMenu: [],
         },
     ]
 
@@ -66,9 +83,11 @@ export const Side = () => {
         <div className="side">
             <div className={styles.sideWrap}>
                 {/* 로고 부분 */}
-                <div className={styles.logoBox}>
-                    <p className={styles.logotit}>Level Up</p>
-                </div>
+                <Link to="/admin/home">
+                    <div className={styles.logoBox}>
+                        <p className={styles.logotit}>Level Up</p>
+                    </div>
+                </Link>
 
                 {/* 관리 리스트 */}
                 <div className={styles.adminListCont}>
@@ -131,6 +150,9 @@ export const Side = () => {
                             </ul>
                         </div>
                     ))}
+                    <div className={styles.btn}>
+                        <Button title="로그아웃" size={'s'} />
+                    </div>
                 </div>
             </div>
         </div>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import styles from './Header.module.css'
 import logo from '../../assets/images/logo_how.png'
 import { useNavigate } from 'react-router-dom'
+import { Search } from '../Search/Search'
 
 export const Header = () => {
     const navigate = useNavigate()
@@ -81,12 +82,14 @@ export const Header = () => {
 
     const handleMenuClick = menuName => {
         setActiveMenu(menuName)
-        if (menuName === 'HowStory') {
-            navigate('/Community')
-        } else if (menuName === 'HowShop') {
-            navigate('/products')
-        } else if (menuName === 'Main') {
-            navigate('/')
+        if (menuName === '중고거래') {
+            navigate('/tradepost')
+        } else if (menuName === '알바') {
+            navigate('/parttime')
+        } else if (menuName === '공지사항') {
+            navigate('notice')
+        } else if (menuName === '고객센터') {
+            navigate('customerservice')
         }
     }
 
@@ -123,15 +126,12 @@ export const Header = () => {
                                 <div className={styles.mainLogo}>
                                     <a>
                                         {/* <img src={logo} alt="Logo" /> */}
-                                        LevelUp
+                                        Level Up
                                     </a>
                                 </div>
                                 <div className={styles.naviMenuList}>
                                     <div className={styles.searchBox}>
-                                        <input
-                                            type="search"
-                                            placeholder="어떤 상품을 찾으시나요?"
-                                        />
+                                        <Search placeholder="어떤 상품을 찾으시나요?" />
                                     </div>
                                 </div>
                             </div>
@@ -269,8 +269,8 @@ export const Header = () => {
                             </div>
                             <div className={styles.menu}>중고거래</div>
                             <div className={styles.menu}>알바</div>
-                            <div className={styles.menu}>고객센터</div>
                             <div className={styles.menu}>공지사항</div>
+                            <div className={styles.menu}>고객센터</div>
                         </div>
                     </div>
                 </div>

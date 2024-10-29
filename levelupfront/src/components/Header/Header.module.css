@@ -51,7 +51,7 @@
 .bottomWrap {
     flex: 1;
     display: flex;
-    gap: 50px;
+    gap: 75px;
     margin-top: 10px;
     align-items: center;
     font-size: 1.25rem;
@@ -70,7 +70,7 @@
 }
 
 .mainLogo a {
-    display: flex;
+    /* display: flex; */
     object-fit: cover;
     max-width: 40px;
     font-size: 34px;
