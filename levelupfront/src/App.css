@@ -81,9 +81,10 @@
 }
 
 .footer {
-  border-top: 1px solid var(--LevelUp-gray-600);
+  /* border-top: 1px solid var(--LevelUp-gray-600); */
   padding: 30px;
-  background-color: var(--LevelUp-gray);
+  /* background-color: var(--LevelUp-gray); */
+  background-color: #D9C3DD;
 }
 
 .side {
@@ -139,6 +140,10 @@ li {
 a,
 button {
   cursor: pointer;
+}
+
+a {
+  text-decoration: none;
 }
 
 

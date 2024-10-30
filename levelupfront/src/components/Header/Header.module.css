@@ -177,6 +177,16 @@
     color: #85508D;
 }
 
+.infoUser {
+    position: relative;
+    font-size: 24px;
+    color: #85508D;
+}
+
+.infoUser a:hover i {
+    color: #85508D;
+}
+
 .infoUser a {
     width: 40px;
     height: 40px;
@@ -263,6 +273,8 @@
     font-size: 14px;
 }
 
+
+
 .modal ul {
     list-style: none;
     margin: 0;
@@ -313,4 +325,37 @@
     transition: 0.2s;
     /* border-bottom: 2px solid #85508D; */
 
+}
+
+/*userModal*/
+.userModal {
+    position: absolute;
+    top: 40%;
+    /* 부모의 하단에 위치 */
+    /* right: 0; */
+    right: 300px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 1000;
+    color: black;
+    width: 80px;
+    display: flex;
+    font-size: 14px;
+}
+
+.userModal ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.userModal li {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.userModal li:hover {
+    background-color: #dd78ea11;
 }

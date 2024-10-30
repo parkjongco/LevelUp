@@ -13,6 +13,7 @@ export const Header = () => {
     const [showModal, setShowModal] = useState(false)
     const [selectedCategory, setSelectedCategory] = useState('의류')
     const categories = ['의류', '가전제품', '뷰티', '가구', '전자기기']
+    const [showUserModal, setShowUserModal] = useState(false)
 
     const detailCategories = {
         의류: [
@@ -112,6 +113,14 @@ export const Header = () => {
         }
     }, [])
 
+    // const handleUserIconClick = () => {
+    //     setShowUserModal(!showUserModal) // 모달 열기/닫기 토글
+    // }
+
+    const handleUserIconClick = subMenu => {
+        setShowUserModal(subMenu) // 모달 열기/닫기 토글
+    }
+
     return (
         <div className="header">
             <div className={styles.headerWrap}>
@@ -156,11 +165,11 @@ export const Header = () => {
                                     </a>
                                 </div>
                                 <div
-                                    className={
-                                        session
-                                            ? `${styles.infoUser}`
-                                            : `${styles.infoIcon}`
-                                    }
+                                    className={`${styles.infoUser} ${
+                                        showUserModal ? styles.active : ''
+                                    }`}
+                                    onMouseEnter={() => setShowUserModal(true)}
+                                    onMouseLeave={() => setShowUserModal(false)}
                                 >
                                     {session ? (
                                         <a>
@@ -172,6 +181,23 @@ export const Header = () => {
                                         </a>
                                     )}
                                 </div>
+                                {showUserModal && (
+                                    <div
+                                        className={styles.userModal}
+                                        onMouseEnter={() =>
+                                            setShowUserModal(true)
+                                        }
+                                        onMouseLeave={() =>
+                                            setShowUserModal(false)
+                                        }
+                                    >
+                                        <ul>
+                                            <li>마이페이지</li>
+                                            <li>history</li>
+                                            <li>로그아웃</li>
+                                        </ul>
+                                    </div>
+                                )}
                             </div>
                         </div>
                         <div className={styles.ranking}>

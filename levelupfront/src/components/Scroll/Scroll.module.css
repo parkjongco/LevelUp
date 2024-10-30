@@ -1,0 +1,26 @@
+/* ScrollToTopButton.css */
+.scrollToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+.scrollButton {
+    width: 50px;
+    height: 50px;
+    background-color: #9c27b01a;
+    border: none;
+    font-size: 1.1rem;
+    color: #85508D;
+    border-radius: 100%;
+    border: none;
+    border: 3px solid #85508D;
+}
+
+.scrollButton:hover {
+    background-color: #85508da8;
+}
+
+.scrollButton:active {
+    background-color: #533158a8;
+}
