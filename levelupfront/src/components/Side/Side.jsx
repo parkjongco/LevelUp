@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styles from './Side.module.css'
 import { useNavigate, Link } from 'react-router-dom' // useNavigate 임포트
 import { Button } from '../Button/Button'
-
+import ScrollToTopButton from '../Scroll/Scroll'
 export const Side = () => {
     const navigate = useNavigate() // useNavigate 사용
     const [notificationCount, setNotificationCount] = useState(5) // 예시로 5개로 설정
@@ -153,6 +153,7 @@ export const Side = () => {
                     <div className={styles.btn}>
                         <Button title="로그아웃" size={'s'} />
                     </div>
+                    {/* <ScrollToTopButton /> */}
                 </div>
             </div>
         </div>
