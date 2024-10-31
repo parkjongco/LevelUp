@@ -1,7 +1,7 @@
 .footerWrap {
     max-width: 1300px;
     display: flex;
-    gap: 20px;
+    gap: 10px;
     margin: 0px auto;
     color: var(--LevelUp-gray-900);
 }

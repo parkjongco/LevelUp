@@ -133,7 +133,7 @@
     border: none;
     border-radius: 10px;
     padding-left: 10px;
-    border: 2px solid #A26BAB;
+    /* border: 2px solid #A26BAB; */
 }
 
 .categoryBox {
@@ -259,7 +259,7 @@
 /* Header.module.css */
 .modal {
     position: absolute;
-    top: 100%;
+    top: 143%;
     /* 부모의 하단에 위치 */
     left: 0;
     background-color: white;
@@ -268,7 +268,7 @@
     padding: 10px;
     z-index: 1000;
     color: black;
-    width: 640px;
+    width: 700px;
     display: flex;
     font-size: 14px;
 }
@@ -358,4 +358,8 @@
 
 .userModal li:hover {
     background-color: #dd78ea11;
+}
+
+.icon{
+    font-size: 25px;
 }

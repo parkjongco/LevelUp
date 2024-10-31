@@ -19,10 +19,10 @@ export const Footer = () => {
                                     <i class="bx bx-chevron-right"></i>
                                 </a>
                             </div>
-                            <div className={styles.customerBtn}>
+                            {/* <div className={styles.customerBtn}>
                                 <button type="button">채팅 상담</button>
                                 <button type="button">이메일 문의</button>
-                            </div>
+                            </div> */}
                         </div>
                         <div className={styles.customerTime}>
                             <div className={styles.customerTimeBox}>

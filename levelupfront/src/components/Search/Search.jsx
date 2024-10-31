@@ -32,7 +32,9 @@ export const Search = ({ placeholder = 'Search...', onSearch, size }) => {
                 type="button"
                 onClick={handleSearch} // 버튼 클릭 시 검색 동작
             >
-                <i className="bx bx-search" />
+                <div className={styles.icon}>
+                    <i className="bx bx-search" />
+                </div>
             </button>
         </div>
     )
