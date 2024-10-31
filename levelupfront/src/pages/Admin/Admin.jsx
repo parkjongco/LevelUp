@@ -5,6 +5,7 @@ import { Main } from './Main/Main'
 import { Member } from './Member/Member'
 import { Blacklist } from './Member/Blacklist/Blacklist'
 import { Reportedmember } from './Member/Reportedmember/Reportedmember'
+import { Banner } from './Banner/Banner'
 
 export const Admin = () => {
     return (
@@ -16,6 +17,16 @@ export const Admin = () => {
                         <>
                             <Title title={'메인 페이지'} />
                             <Main />
+                        </>
+                    }
+                />
+
+                <Route
+                    path="admin/banner"
+                    element={
+                        <>
+                            <Title title={'배너'} />
+                            <Banner />
                         </>
                     }
                 />

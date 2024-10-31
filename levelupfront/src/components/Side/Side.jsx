@@ -10,7 +10,7 @@ export const Side = () => {
     const menuData = [
         {
             title: '메인 페이지',
-            subMenu: [{ title: '배너 관리', path: '/' }],
+            subMenu: [{ title: '배너 관리', path: '/admin/banner' }],
         },
         {
             title: '회원 관리',
