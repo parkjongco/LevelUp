@@ -42,3 +42,7 @@
 .searchBox button.searchBtn:hover {
     background: #f0f0f0;
 }
+
+.icon{
+    font-size: 25px;
+}

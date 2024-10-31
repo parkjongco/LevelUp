@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styles from './Side.module.css'
 import { useNavigate, Link } from 'react-router-dom' // useNavigate 임포트
 import { Button } from '../Button/Button'
-import ScrollToTopButton from '../Scroll/Scroll'
+import Scroll from '../Scroll/Scroll'
 export const Side = () => {
     const navigate = useNavigate() // useNavigate 사용
     const [notificationCount, setNotificationCount] = useState(5) // 예시로 5개로 설정
@@ -36,44 +36,60 @@ export const Side = () => {
             title: '게시판 관리',
             subMenu: [
                 {
-                    title: '신고 게시글 목록',
+                    title: '신고 중고거래 목록',
                     icon: 'bx bxs-message-square-error',
-                    path: '/',
+                    path: '/admin/tradepost',
                 },
-                { title: '신고 알바 목록', icon: 'bx bx-angry', path: '/' },
+                {
+                    title: '신고 알바 목록',
+                    icon: 'bx bx-angry',
+                    path: '/admin/timepart',
+                },
             ],
         },
         {
             title: '고객센터 관리',
             subMenu: [
-                { title: '공지사항 관리', icon: 'bx bx-list-ul', path: '/' },
+                {
+                    title: '공지사항 목록',
+                    icon: 'bx bx-list-ul',
+                    path: '/admin/notice',
+                },
                 {
                     title: 'Q&A 목록',
                     icon: 'bx bx-message-alt-edit',
-                    path: '/',
+                    path: '/admin/qna',
                 },
-                { title: 'FAQ 목록', icon: 'bx bx-support', path: '/' },
+                {
+                    title: 'FAQ 목록',
+                    icon: 'bx bx-support',
+                    path: '/admin/faq',
+                },
             ],
         },
         {
-            title: '결제관리',
+            title: '결제 관리',
             subMenu: [
-                { title: '거래내역 조회', icon: 'bx bx-receipt', path: '/' },
+                {
+                    title: '거래내역 조회',
+                    icon: 'bx bx-receipt',
+                    path: '/admin/payment',
+                },
                 {
                     title: '임시 카테고리',
                     icon: 'bx bx-question-mark',
-                    path: '/',
+                    path: '/admin/test',
                 },
             ],
         },
         {
-            title: '알림관리',
+            title: '알림 관리',
             subMenu: [
                 { title: '알림', icon: 'bx bx-bell', path: '/' },
                 {
                     title: '채팅',
                     icon: 'bx bx-message-rounded-dots',
-                    path: '/',
+                    path: '/admin/chat',
                 },
             ],
         },

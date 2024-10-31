@@ -88,9 +88,9 @@ export const Header = () => {
         } else if (menuName === '알바') {
             navigate('/parttime')
         } else if (menuName === '공지사항') {
-            navigate('notice')
+            navigate('/notice')
         } else if (menuName === '고객센터') {
-            navigate('customerservice')
+            navigate('/customerservice')
         }
     }
 
@@ -147,7 +147,9 @@ export const Header = () => {
                             <div className={styles.naviInfo}>
                                 <div className={styles.infoIcon}>
                                     <a>
-                                        <i class="bx bx-message-rounded-dots"></i>
+                                        <div className={styles.icon}>
+                                            <i class="bx bx-message-rounded-dots"></i>
+                                        </div>
                                     </a>
                                 </div>
                                 <div className={styles.infoIcon}>
@@ -156,12 +158,16 @@ export const Header = () => {
                                             navigate('/cart')
                                         }}
                                     >
-                                        <i className="bx bx-cart"></i>
+                                        <div className={styles.icon}>
+                                            <i className="bx bx-cart"></i>
+                                        </div>
                                     </a>
                                 </div>
                                 <div className={styles.infoIcon}>
                                     <a>
-                                        <i className="bx bx-bell"></i>
+                                        <div className={styles.icon}>
+                                            <i className="bx bx-bell"></i>
+                                        </div>
                                     </a>
                                 </div>
                                 <div
@@ -177,7 +183,9 @@ export const Header = () => {
                                         </a>
                                     ) : (
                                         <a>
-                                            <i class="bx bxs-user-circle"></i>
+                                            <div className={styles.icon}>
+                                                <i class="bx bxs-user-circle"></i>
+                                            </div>
                                         </a>
                                     )}
                                 </div>

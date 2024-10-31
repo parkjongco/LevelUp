@@ -77,14 +77,13 @@
   font-family: 'Pretendard', sans-serif;
   letter-spacing: -0.25px;
   box-sizing: border-box;
-  gap: 30px;
+  gap: 10px;
 }
 
 .footer {
   /* border-top: 1px solid var(--LevelUp-gray-600); */
   padding: 30px;
-  /* background-color: var(--LevelUp-gray); */
-  background-color: #D9C3DD;
+  background-color: var(--LevelUp-point-color-lightest)
 }
 
 .side {
