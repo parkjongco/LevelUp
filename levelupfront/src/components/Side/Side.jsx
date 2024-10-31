@@ -85,7 +85,7 @@ export const Side = () => {
         {
             title: '알림 관리',
             subMenu: [
-                { title: '알림', icon: 'bx bx-bell', path: '/' },
+                { title: '알림', icon: 'bx bx-bell', path: '/admin/' },
                 {
                     title: '채팅',
                     icon: 'bx bx-message-rounded-dots',
