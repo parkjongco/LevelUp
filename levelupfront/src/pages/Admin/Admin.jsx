@@ -10,8 +10,8 @@ import { Tradepost } from './Tradepost/Tradepost'
 import { Timepart } from './Timepart/Timepart'
 import { Payment } from './Payment/Payment'
 import { Notice } from './Notice/Notice'
-import Qna from './Customerservice/Qna/Qna'
-import Faq from './Customerservice/Faq/Faq'
+import Qna from './Customerservice/Qna/QNA'
+import Faq from './Customerservice/FAQ/FAQ'
 import { Chat } from './Chat/Chat'
 
 export const Admin = () => {
