@@ -301,10 +301,30 @@ export const Header = () => {
                                     </div>
                                 )}
                             </div>
-                            <div className={styles.menu}>중고거래</div>
-                            <div className={styles.menu}>알바</div>
-                            <div className={styles.menu}>공지사항</div>
-                            <div className={styles.menu}>고객센터</div>
+                            <div
+                                className={styles.menu}
+                                onClick={() => handleMenuClick('중고거래')}
+                            >
+                                중고거래
+                            </div>
+                            <div
+                                className={styles.menu}
+                                onClick={() => handleMenuClick('알바')}
+                            >
+                                알바
+                            </div>
+                            <div
+                                className={styles.menu}
+                                onClick={() => handleMenuClick('공지사항')}
+                            >
+                                공지사항
+                            </div>
+                            <div
+                                className={styles.menu}
+                                onClick={() => handleMenuClick('고객센터')}
+                            >
+                                고객센터
+                            </div>
                         </div>
                     </div>
                 </div>
